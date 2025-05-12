@@ -1,7 +1,6 @@
-<!-- GitHub Actions -->
+## Technical questions and answers
 
-[![](https://img.shields.io/github/actions/workflow/status/dcantu96/technical-questions/ci.yml?branch=main&style=flat-square)](https://github.com/dcantu96/technical-questions/actions)
+#### Written in Typescript and deno with a simple CI using codecov and github actions
 
-<!-- Codecov -->
-
+![CI](https://img.shields.io/github/actions/workflow/status/dcantu96/technical-questions/ci.yml?branch=main&style=flat-square)
 [![codecov](https://codecov.io/gh/dcantu96/technical-questions/branch/main/graph/badge.svg?style=flat-square)](https://codecov.io/gh/dcantu96/technical-questions)
