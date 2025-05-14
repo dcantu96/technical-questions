@@ -6,3 +6,11 @@ Deno.test("basic two sum", () => {
   assertEquals(twoSum([3, 2, 4], 6), [1, 2])
   assertEquals(twoSum([3, 3], 6), [0, 1])
 })
+
+Deno.test("empty case", () => {
+  assertEquals(twoSum([], 9), [])
+})
+
+Deno.test("no pair found", () => {
+  assertEquals(twoSum([1, 5, 9], 3), [])
+})
