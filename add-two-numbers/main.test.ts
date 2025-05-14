@@ -31,4 +31,11 @@ Deno.test("carry value is handled as expected", () => {
     addTwoNumbers(arrayToList([9, 7, 8]), arrayToList([6, 1, 8])),
     arrayToList([5, 9, 6, 1]),
   )
+  assertEquals(
+    addTwoNumbers(
+      arrayToList([9, 9, 9, 9, 9, 9, 9]),
+      arrayToList([9, 9, 9, 9]),
+    ),
+    arrayToList([8, 9, 9, 9, 0, 0, 0, 1]),
+  )
 })
