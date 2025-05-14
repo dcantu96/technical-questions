@@ -14,16 +14,18 @@ export function addTwoNumbers(
   const head = new ListNode(0)
   let current = head
   let carry = 0
+  let p1 = l1
+  let p2 = l2
 
-  while (l1 !== null || l2 !== null) {
-    const x = (l1 !== null) ? l1.val : 0
-    const y = (l2 !== null) ? l2.val : 0
+  while (p1 !== null || p2 !== null) {
+    const x = (p1 !== null) ? p1.val : 0
+    const y = (p2 !== null) ? p2.val : 0
     const sum = carry + x + y
     carry = Math.floor(sum / 10)
     current.next = new ListNode(sum % 10)
     current = current.next
-    if (l1 !== null) l1 = l1.next
-    if (l2 !== null) l2 = l2.next
+    if (p1 !== null) p1 = p1.next
+    if (p2 !== null) p2 = p2.next
   }
   if (carry > 0) {
     current.next = new ListNode(carry)
