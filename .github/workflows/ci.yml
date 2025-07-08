@@ -32,7 +32,7 @@ jobs:
 
       - name: Run linter
         run: deno lint
-      
+
       - name: Run tests and create coverage files
         run: deno test --coverage=coverage
 
