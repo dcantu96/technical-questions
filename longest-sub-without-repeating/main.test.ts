@@ -42,3 +42,31 @@ Deno.test("Longest Substring Without Repeating Characters - various patterns", (
   // Repeating pattern
   assertEquals(solution("abcabcabcabc"), 3) // "abc"
 })
+
+Deno.test("Longest Substring Without Repeating Characters - special characters", () => {
+  // With numbers
+  assertEquals(solution("123321"), 3) // "123" or "321"
+
+  // With special characters
+  assertEquals(solution("a!@#$%a"), 6) // "a!@#$%" or "!@#$%a"
+
+  // Mixed characters, numbers, and symbols
+  assertEquals(solution("a1b2c3!@#"), 9) // entire string
+
+  // With spaces
+  assertEquals(solution("a b c a"), 3) // "a b" or "b c" or " c a"
+
+  // Punctuation
+  assertEquals(solution("hello,world!"), 7) // ",world!"
+})
+
+Deno.test("Longest Substring Without Repeating Characters - longer strings", () => {
+  // Full alphabet
+  assertEquals(solution("abcdefghijklmnopqrstuvwxyz"), 26)
+
+  // Pattern with long unique sequence
+  assertEquals(solution("aabcdefghijklmnopqrstuvwxyzaa"), 26)
+
+  // Complex case
+  assertEquals(solution("abcdefghabcdefgh"), 8) // "abcdefgh"
+})
