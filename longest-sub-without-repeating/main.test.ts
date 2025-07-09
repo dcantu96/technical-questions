@@ -28,3 +28,17 @@ Deno.test("Longest Substring Without Repeating Characters - edge cases", () => {
   assertEquals(solution("ab"), 2)
   assertEquals(solution("aa"), 1)
 })
+
+Deno.test("Longest Substring Without Repeating Characters - various patterns", () => {
+  // Longest substring at the beginning
+  assertEquals(solution("abcdefabc"), 6) // "abcdef"
+
+  // Longest substring at the end
+  assertEquals(solution("abcabcdef"), 6) // "abcdef"
+
+  // Longest substring in the middle
+  assertEquals(solution("abcdefabcd"), 6) // "cdefab" or "defabc"
+
+  // Repeating pattern
+  assertEquals(solution("abcabcabcabc"), 3) // "abc"
+})
